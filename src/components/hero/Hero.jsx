@@ -1,26 +1,53 @@
 import React from "react";
 import "./Hero.css";
 import Laptop from "../../assets/laptop.jpeg";
+import Button from "../button/Button";
 
 const Hero = () => {
+  const data = [
+    {
+      name: "Ade",
+      age: "12",
+      school: "OIC",
+    },
+    {
+      name: "Ade",
+      age: "12",
+      school: "OIC",
+    },
+    {
+      name: "Ade",
+      age: "12",
+      school: "OIC",
+    },
+    {
+      name: "Ade",
+      age: "12",
+      school: "OIC",
+    },
+    {
+      name: "Ade",
+      age: "12",
+      school: "OIC",
+    },
+  ];
   return (
     <>
-    <div>
-      <div className="card" style={{ width: "18rem" }}>
-        <img src={Laptop} className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a>
+      {data.map((item, index) => (
+        <div className="card" style={{ width: "18rem" }} key={index}>
+          <img src={Laptop} className="card-img-top" alt="laptop" />
+          <div className="card-body">
+            <h5 className="card-title">{item.name}</h5>
+            <p className="card-text">{item.school}</p>
+            <a href="#" className="btn btn-primary">
+              {item.age}
+            </a>
+          </div>
+          <Button title="Click me" />
+          <Button title="Press" />
+          <Button title="Add to cart" />
         </div>
-      </div>
-    </div>
-    <div></div>
+      ))}
     </>
   );
 };
