@@ -12,6 +12,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import DashboardComponent from "./components/dashboardComponent/DashboardComponent";
 import Users from "./pages/users/Users";
 import Profile from "./pages/profile/Profile";
+import Register from "./pages/register/Register";
 // import Form from "./components/form/Form";
 // import AboutHook from "./components/aboutHook/AboutHook";
 // import Api from "./components/api/Api";
@@ -33,6 +34,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/login" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<DashboardComponent />} />
             <Route path="users" element={<Users />} />
